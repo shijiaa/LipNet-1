@@ -23,10 +23,12 @@ def untokenize(words):
 # Source: https://stackoverflow.com/questions/367155/splitting-a-string-into-words-and-punctuation
 def tokenize(text):
     return re.findall(r"\w+|[^\w\s]", text, re.UNICODE)
+#  find all pattern as "word characters" or "word characters followed by a non letter followed by a whithspace character"
 
 # Source: http://norvig.com/spell-correct.html (with some modifications)
 class Spell(object):
     def __init__(self, path):
+        #find all words and turn to dictionary
         self.dictionary = Counter(list(string.punctuation) + self.words(open(path).read()))
 
     def words(self, text):
