@@ -1,6 +1,7 @@
 import numpy
 import doctest
 
+# word error rate between two word lists
 def wer(r, h):
     """
     Source: https://martin-thoma.com/word-error-rate-calculation/
